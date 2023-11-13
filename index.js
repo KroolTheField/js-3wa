@@ -21,3 +21,14 @@ function myFilter(arr,func) {
 
     return filteredArr
 }
+
+function myReduce(arr, func, initialValue) {
+
+    let accumulator = initialValue !== undefined ? initialValue : 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        accumulator = func(arr[i], accumulator);
+    }
+
+    return accumulator;
+}
